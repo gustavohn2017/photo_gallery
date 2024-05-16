@@ -15,7 +15,7 @@
  
 
     $('form').on('submit', function(e){
-        e.preventdefault();
+        e.preventDefault();
         const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
         const novoItem = $('<li style ="display: none"></li>');
         $(`<img src="${enderecoDaNovaImagem}"/>`).appendTo(novoItem);
@@ -27,7 +27,7 @@
             </div> 
          `).appendTo(novoItem);
          $(novoItem).appendTo('ul')
-         $(novoItem).fadeIn(5000);
+         $(novoItem).fadeIn(3000);
          $('#endereco-imagem-nova').val('')
       })
       // trabalhando com input
